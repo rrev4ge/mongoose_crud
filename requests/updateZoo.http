@@ -1,0 +1,6 @@
+PATCH http://localhost:3000/api/zoo/5fe5acd446477e3d24706ad8 HTTP/1.1
+Content-Type: application/vnd.api+json 
+
+{
+   "name": "New-York"
+}

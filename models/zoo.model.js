@@ -5,13 +5,13 @@ const { Schema } = mongoose;
 
 const validateEmailSchema = yup.string().email()
 
-const animalSchema = new Schema({
-    genus: String,
-    species: String, 
+const zooSchema = new Schema({
     name: {
       type:String,
       required:true
     },
+    city: String,
+    address: String,
     email: {
       type: String,
       unique:true,
@@ -19,14 +19,11 @@ const animalSchema = new Schema({
       validate:{
         validator: value => validateEmailSchema.isValidSync(value)
       }
-    },
-    limbs_count: Number,
-    birthday: Date,
-    zoo: [{ type: Schema.Types.ObjectId, ref: 'Zoo' }]
+    }
     }
   );
 
-const Animal = mongoose.model('Animal', animalSchema);
+const Zoo = mongoose.model('Zoo', zooSchema);
 
 
-module.exports = Animal;
+module.exports = Zoo;

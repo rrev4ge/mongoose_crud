@@ -1,0 +1,13 @@
+const http = require('http');
+const app = require('../app');
+
+const PORT = 3000;
+
+const server = http.createServer(app);
+
+server.listen(PORT);
+
+
+// Доработать проект с занятия 20.12.2020, разработав модель Зоопарк (каждое животное
+// может находиться в каком-то филиале зоопарка). Реализовать CRUD над данной
+// сущностью.

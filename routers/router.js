@@ -1,9 +1,10 @@
 const {Router} = require('express');
-const animalRouter = require('./routers');
+const animalRouter = require('./animalRouter');
+const zooRouter = require('./zooRouter');
 
 const router = new Router();
 
-// /api/animal
 router.use('/animals', animalRouter)
+router.use('/zoo', zooRouter)
 
 module.exports = router;
